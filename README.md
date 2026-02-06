@@ -129,8 +129,10 @@ Copy the contents of each `.txt` file into the **System Instructions** of your L
     *   **팁:** 최대한 '멍청하고 단순하게' 지시하십시오. (예: "주식 초보 도와줘")
 2.  **[02_XML_Draft_1st_Revision.txt](./02_XML_Draft_1st_Revision.txt)**
 3.  **[03_Idea_Bank.txt](./03_Idea_Bank.txt)**
-4.  **[04_user_representative.txt](./04_user_representative.txt)**
-5.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
+    *   **Tip:** This step is optional. If you prefer practicality, skip it.
+    *   **팁:** 이 단계는 선택사항입니다. 실용성을 원한다면 스킵하세요.
+5.  **[04_user_representative.txt](./04_user_representative.txt)**
+6.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
 
 > **Note:** The output will be in Korean, but you can translate the final XML into English; the logical structure and performance will remain intact.
 > **참고:** 결과물은 한국어로 출력되나, 최종 XML을 영어로 번역하여 사용해도 논리적 구조와 성능은 완벽하게 유지됩니다.
