@@ -132,7 +132,9 @@ Copy the contents of each `.txt` file into the **System Instructions** of your L
     *   **Tip:** This step is optional. If you prefer practicality, skip it.
     *   **팁:** 이 단계는 선택사항입니다. 실용성을 원한다면 스킵하세요.
 5.  **[04_user_representative.txt](./04_user_representative.txt)**
-6.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
+    *   **Tip:** If you skipped step 3, skip this step too.
+    *   **팁:** 3단계를 스킵했다면, 이 단계도 스킵하세요.
+7.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
 
 > **Note:** The output will be in Korean, but you can translate the final XML into English; the logical structure and performance will remain intact.
 > **참고:** 결과물은 한국어로 출력되나, 최종 XML을 영어로 번역하여 사용해도 논리적 구조와 성능은 완벽하게 유지됩니다.
