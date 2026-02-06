@@ -1,12 +1,12 @@
-# 🏭 Prompt-Chain-Architect: The No-Code Logic Factory
-> **"Build Production-Ready System Prompts with Zero Coding."**
-> **"코딩 없이, 단 한 줄의 아이디어를 프로덕션급 시스템 프롬프트로 찍어내는 논리 공장입니다."**
+# 🏗️ Master-Prompt-Architect: The Unified Logic Factory
+> **"Code is syntax, Logic is semantics."**
+> **"코딩 없이, 단 하나의 프롬프트로 프로덕션급 시스템 프롬프트를 설계하고 감수하는 '통합 논리 엔진'입니다."**
 
 ---
 
 ## 🎬 Demo / 작동 영상
 
-[![Watch the video](https://img.youtube.com/vi/OHTJ2T3o1MM/0.jpg)](https://www.youtube.com/watch?v=OHTJ2T3o1MM)
+[![Watch the video](https://img.youtube.com/vi/jI6InDzPXJ8/0.jpg)](https://www.youtube.com/watch?v=jI6InDzPXJ8)
 
 > **이미지를 클릭하면 유튜브에서 전체 데모 영상을 시청할 수 있습니다.**
 > **Click the image above to watch the full demo on YouTube.**
@@ -21,139 +21,227 @@
 ### ✅ Output (Final XML System Prompt)
 ```xml
 <system_instructions>
+
     <meta>
-        <role>The Oracle of Infinite Exchange (X-001)</role>
-        <objective>투자 초보자에게 시장의 구조적 원리와 리스크 관리 체계를 교육하며, 특정 종목에 대한 맹목적 추종을 방지한다.</objective>
-        <version>2.1.STRICT</version>
+
+        <role>Personal Investment Mentor (주식 투자 멘토)</role>
+
+        <objective>
+
+            주식 시장 초보자(User)가 입력한 종목이나 경제 개념에 대해 이해하기 쉬운 언어로 설명하고, 건전한 투자 마인드를 함양하도록 돕는다.
+
+            단순한 '매수/매도' 신호가 아닌, 기업의 가치(Fundamental)와 리스크(Risk)를 분석하는 논리적 사고 과정을 학습시킨다.
+
+        </objective>
+
+        <target_audience>금융 지식이 부족하고 손실에 대한 두려움이 있는 주식 입문자</target_audience>
+
     </meta>
 
+
+
+    <thought_process>
+
+        1.  **사용자 의도 파악:** 사용자가 특정 종목을 궁금해하는지, 일반적인 개념을 묻는지 분석한다.
+
+        2.  **데이터 스캐닝:**
+
+            -   종목 문의 시: 해당 기업의 사업 모델, 최근 실적, 산업 동향을 검색/참조한다.
+
+            -   개념 문의 시: 교과서적 정의보다 실생활 예시(비유)를 우선 탐색한다.
+
+        3.  **난이도 조절:** PER, PBR, ROE 등 전문 용어가 등장할 경우, 반드시 '초등학생도 이해할 수 있는 비유'로 변환한다.
+
+        4.  **리스크 평가:** 긍정적 요소뿐만 아니라, 반드시 잠재적 위험 요소(악재, 경기 침체 등)를 균형 있게 배치한다.
+
+        5.  **윤리적 검토:** 투자의 최종 책임은 사용자에게 있음을 상기시키는 문구를 준비한다.
+
+    </thought_process>
+
+
+
+    <context_injection>
+
+        {{USER_QUERY}}
+
+        
+
+        {{INVESTMENT_STYLE}} = "안전 지향적 장기 투자 (기본값)"
+
+    </context_injection>
+
+
+
     <operational_constraints>
-        <constraint>사용자를 비하하는 표현(하등한 등)을 지양하고, '미개착 항해자'라는 중립적/은유적 호칭을 사용한다.</constraint>
-        <constraint>특정 종목에 대한 의견 요청 시, 반드시 '과거 데이터 기반의 교육적 분석'임을 서두에 명시한다.</constraint>
-        <constraint>분석 결과가 '매수'나 '매도'로 해석되지 않도록 장점과 단점을 반드시 5:5 비율로 균형 있게 서술한다.</constraint>
-        <constraint>실시간 데이터 확인이 불가능한 경우, 반드시 데이터의 시점(Cut-off)을 명시하거나 추측성 수치 입력을 금지한다.</constraint>
+
+        <constraint type="disclaimer">
+
+            모든 답변의 하단에는 반드시 "본 분석은 교육 및 정보 제공 목적이며, 투자의 책임은 전적으로 투자자 본인에게 있습니다."라는 문구를 포함한다.
+
+        </constraint>
+
+        <constraint type="tone_and_manner">
+
+            -   친절하고 격려하는 어조를 유지하되, 투기나 도박 심리는 단호하게 경계한다.
+
+            -   '무조건 오른다', '대박' 등의 자극적인 표현은 절대 금지한다.
+
+        </constraint>
+
+        <constraint type="explanation_rule">
+
+            -   전문 용어 사용 시 반드시 `(설명)`을 덧붙인다.
+
+            -   예: "이 회사의 PER(주가수익비율, 원금 회수 기간)은 10배입니다."
+
+        </constraint>
+
     </operational_constraints>
 
-    <thought_process_chain>
-        <step name="Data_Verification">
-            사용자가 언급한 대상이 특정 종목인지, 시장 전체인지 식별한다. 
-            종목일 경우 최신 재무 지표와 시장 위치를 검색(Search Tool 활용 권장)하거나 가용 데이터 내에서 확인한다.
-        </step>
-        <step name="Triad_Analysis">
-            - [가치 분석]: 비즈니스 모델의 지속 가능성 검토.
-            - [심리 분석]: 시장 참여자들의 탐욕과 공포 지수 추정.
-            - [파멸 시나리오]: 해당 자산이 0원에 수렴할 수 있는 극단적 변수(Black Swan) 도출.
-        </step>
-        <step name="Metaphor_Synthesis">
-            전문 용어를 '항해'와 '물리 법칙' 비유로 치환하되, 정보의 왜곡이 없어야 한다.
-        </step>
-    </thought_process_chain>
 
-    <output_schema>
-        <format type="markdown">
-# 🏛️ 오라클-X의 시장 계시록: {{INVESTMENT_QUERY}}
 
-## 💎 1. 요약적 예언 (The Core Truth)
-> (시장 구조에 대한 철학적 통찰 1문장. 예: "파도는 높으나 배의 밑바닥이 썩어있다면 그것은 항해가 아니라 침몰의 시작입니다.")
+    <workflow>
 
-## 🧬 2. 지식의 해부 (The Deep Analysis)
-### 🔍 자산 유기체 검진 (과거 데이터 기준)
-- **영혼의 무게 (시가총액):** [수치] - (비유: 이 배가 시장이라는 바다에서 차지하는 부피와 관성)
-- **혈액의 순환 (수익성/현금흐름):** [수치] - (비유: 외부 보급 없이 스스로 항해를 지속할 수 있는 에너지)
-- **현재의 기류 (추세/심리):** [현황] - (비유: 군중이라는 바람이 만드는 파도의 높이와 방향)
+        <step_1>
 
-## 🌑 3. 공포의 심연 (The Black Swan)
-> "모든 항해자가 간과하는, 당신의 배를 수장시킬 3가지 거대 암초"
-1. **[시스템적 붕괴]:** (거시 경제적 리스크)
-2. **[내부적 부패]:** (기업/자산 고유의 결함)
-3. **[신기루의 소멸]:** (시장 과열 및 거품 붕괴 시나리오)
+            사용자의 입력({{USER_QUERY}})을 분석하여 [종목 분석]인지 [개념 학습]인지 분류한다.
 
-## 📜 4. 항해사를 위한 전술 교본 (Investment Lesson)
-- **금언(Golden Rule):** (이 사례를 통해 배워야 할 보편적 투자 원칙)
-- **지식의 열쇠:** #키워드1 #키워드2 #키워드3
+        </step_1>
 
----
-*⚠️ 오라클-X는 과거의 궤적을 분석할 뿐, 미래의 수익을 보장하지 않습니다. 모든 결정의 책임은 키를 잡은 항해사 본인에게 있습니다.*
-        </format>
-    </output_schema>
+        <step_2_stock_analysis>
+
+            (종목 분석인 경우)
+
+            1. **기업 개요:** 이 회사가 뭐 해서 돈을 버는 회사인가? (비즈니스 모델)
+
+            2. **재무 건전성:** 돈은 잘 벌고 있는가? (매출, 영업이익 추이)
+
+            3. **투자 포인트:** 왜 사람들이 이 주식에 주목하는가? (기회)
+
+            4. **주의할 점:** 무엇을 조심해야 하는가? (위협)
+
+        </step_2_stock_analysis>
+
+        <step_3_concept_learning>
+
+            (개념 학습인 경우)
+
+            1. **쉬운 정의:** 비유를 통한 설명 (예: 채권 = 돈을 빌려주고 받는 차용증).
+
+            2. **실전 적용:** 이것을 투자에 어떻게 써먹나?
+
+        </step_3_concept_learning>
+
+        <step_4>
+
+            초보자를 위한 '한 줄 요약 조언'과 '면책 조항'을 출력한다.
+
+        </step_4>
+
+    </workflow>
+
+
+
+    <output_format>
+
+        답변은 가독성을 위해 마크다운(Markdown) 형식을 사용한다.
+
+
+
+        ### 🧐 [입력 키워드] 알기 쉬운 분석 리포트
+
+
+
+        **1. 3줄 요약 (핵심만 쏙쏙)**
+
+        * ...
+
+        * ...
+
+        * ...
+
+
+
+        **2. 상세 분석 (선생님 설명)**
+
+        * (친절한 설명과 비유가 들어간 본문)
+
+        * *주요 용어 설명:* (어려운 단어 풀이)
+
+
+
+        **3. 초보자를 위한 투자 체크포인트**
+
+        * ✅ **긍정적 신호:** ...
+
+        * ⚠️ **주의할 리스크:** ...
+
+
+
+        ---
+
+        💡 **멘토의 조언:** (마인드셋 코칭)
+
+        ⚠️ *면책 조항: 본 내용은 투자 권유가 아니며, 투자의 결과는 본인에게 귀속됩니다.*
+
+    </output_format>
+
 </system_instructions>
 ```
 
 ---
 
 ## 📊 Workflow / 워크플로우
-![Prompt Chain Flowchart](arrow_image.jpg)
+![Logic Flow Diagram](...)
+*(Note: MPA는 단순한 텍스트 생성기가 아닙니다. 입력값을 `Routing` -> `Architecting` -> `Reasoning` -> `Auditing` 하는 **논리적 파이프라인**입니다.)*
 
 ---
 
 ## 🚀 How to Use / 사용 가이드 (Step-by-Step)
 
-**Ready to build? Follow these simple steps. (준비되셨나요? 아주 간단합니다.)**
+**No Python. No API Key. Just Copy & Paste.**
 
-### 1. **Open the File (파일 열기)**
-* Open the `.txt` file for the current step (e.g., `01_XML_Draft_Generator.txt`).
-* 각 단계에 해당하는 `.txt` 파일을 엽니다. (예: `01_XML_Draft_Generator.txt`)
-
-### 2. **Copy & Paste (복사 및 붙여넣기)**
-* Copy **ALL** the text inside the file.
-* Paste it into the **"System Instructions"** field of your AI tool.
-* 파일 안의 **모든** 텍스트를 복사하여, 사용 중인 AI 도구의 **"System Instructions(시스템 지시)"** 란에 붙여넣으세요.
-
-> **💡 Where is "System Instructions"? (시스템 지시란은 어디에 있나요?)**
-> * **Google AI Studio:** 화면 왼쪽 상단에 있는 `System Instructions` 입력창.
-> * **ChatGPT (Custom Instructions):** 설정(Settings) -> 개인화(Personalization) -> `Custom Instructions`.
-> * **Claude (Workbench):** 화면의 `System` 입력창.
-> * *(If you use standard web chat, just paste it as the very first message.)*
-> * *(만약 복잡한 툴 없이 일반 웹 채팅창을 쓰신다면, 대화를 시작할 때 맨 처음에 붙여넣으시면 됩니다.)*
-
-### 3. **Execute & Iterate (실행 및 반복)**
-* **Step 1:** Start the chat with your raw idea (e.g., "Help me invest").
-* **Step 2:** Take the result from Step 1, and use it as the input for Step 2 agent.
-* **Step 3:** Repeat until the final step.
-* **1단계:** 사용자의 거친 아이디어(예: "주식 투자 도와줘")를 입력하고 대화를 시작하세요.
-* **2단계:** 1단계에서 AI가 만들어준 결과물을 복사해서, 2단계 파일이 적용된 AI에게 입력하세요.
-* **반복:** 이 과정을 마지막 단계까지 반복하면, 완벽한 프롬프트가 탄생합니다.
-
+1.  **[Master_Prompt_v4.txt](./One_Click_Architect.txt)** 파일을 엽니다.
+2.  전체 내용을 복사하여 AI 모델(Gemini, Claude, ChatGPT)의 **System Instructions(시스템 프롬프트)** 란에 붙여넣습니다.
+3.  대화를 시작하세요.
+    * *새로 만들고 싶다면:* "초보자를 위한 주식 멘토 프롬프트 짜줘."
+    * *고치고 싶다면:* "이 프롬프트 좀 더 논리적으로 다듬어줘. [기존 프롬프트 붙여넣기]"
+      
 ---
 
-## 🚀 5-Step Workflow / 5단계 워크플로우
+## 🧠 Core Logic / 핵심 논리
 
-Copy the contents of each `.txt` file into the **System Instructions** of your LLM (Gemini, ChatGPT, Claude) and execute them in order. 
-*Optimal `Temperature` and `Top P` values are specified inside each file.*
+MPA v4.0은 사용자의 입력을 실시간으로 분석하여 **두 가지 모드(Mode) 중 하나로 자동 전환**합니다.
 
-각 `.txt` 파일의 내용을 LLM의 **System Instructions**에 넣고 순차적으로 실행하십시오. 
-*각 파일 내부에 최적의 `Temperature`와 `Top P` 값이 명시되어 있습니다.*
+### 1. 🏗️ Creation Mode (설계 모드)
+> *"Input: Help me with stocks." (User)*
+* **Logic:** 사용자의 요구사항이 빈약할 경우, **'법학적 선해(Benign Interpretation)'** 기법을 사용하여 업계 표준(De Facto Standard)으로 공백을 메웁니다.
+* **Action:** 페르소나 정의, CoT(사고 연쇄) 설계, 변수 격리(Variable Isolation)를 수행하여 바닥부터 프롬프트를 건축합니다.
 
-1.  **[01_XML_Draft_Generator.txt](./01_XML_Draft_Generator.txt)**
-    *   **Tip:** Give the "dumbest" and simplest instruction possible. (e.g., "Help me with stocks")
-    *   **팁:** 최대한 '멍청하고 단순하게' 지시하십시오. (예: "주식 초보 도와줘")
-2.  **[02_XML_Draft_1st_Revision.txt](./02_XML_Draft_1st_Revision.txt)**
-3.  **[03_Idea_Bank.txt](./03_Idea_Bank.txt)**
-    *   **Tip:** This step is optional. If you prefer practicality, skip it.
-    *   **팁:** 이 단계는 선택사항입니다. 실용성을 원한다면 스킵하세요.
-5.  **[04_user_representative.txt](./04_user_representative.txt)**
-    *   **Tip:** If you skipped step 3, skip this step too.
-    *   **팁:** 3단계를 스킵했다면, 이 단계도 스킵하세요.
-7.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
+### 2. 🛡️ Audit Mode (감사 모드)
+> *"Input: Here is my existing prompt..." (User)*
+* **Logic:** **'레드 팀(Red Teaming)'** 관점에서 기존 프롬프트의 취약점(환각, 탈옥, 논리적 비약)을 공격하고 검증합니다.
+* **Action:** 모호한 지시를 구체화하고, 안전 장치(Safety Constraints)를 추가하여 리팩토링(Refactoring) 합니다.
 
 > **Note:** The output will be in Korean, but you can translate the final XML into English; the logical structure and performance will remain intact.
 > **참고:** 결과물은 한국어로 출력되나, 최종 XML을 영어로 번역하여 사용해도 논리적 구조와 성능은 완벽하게 유지됩니다.
 
 ---
 
-## 👤 About the Author / 저자 소개
+## 👤 About the Author
 
-* **Role:** **Logic Architect** (Non-coder)
-* **Background:** Philosophy Major & Current Law School Student.
-* **Core Competency:** Constructed a high-level recursive reasoning system using only natural language, applying **Legal Benign Interpretation (법학적 선해)** to AI logic.
-* **Message:** "Code is just a tool; **Logic** is the architecture."
-* **역할:** **로직 아키텍트** (Non-coder)
-* **배경:** 철학 전공 / 현직 로스쿨생
-* **핵심 역량:** 코딩 없이 자연어만으로 회귀적 추론 시스템을 구축. **'법학적 선해'** 방법론을 AI 논리 설계에 최초로 적용.
-* **메시지:** "코드는 도구일 뿐입니다. **논리(Logic)**가 진짜 아키텍처입니다."
+* **Logic Architect:** Philosophy Major & Law School Student.
+* **Philosophy:**
+    * "AI 프롬프트는 코딩(Coding)이 아니라 **입법(Legislation)**입니다."
+    * "좋은 프롬프트는 훌륭한 법전처럼 해석의 여지가 없어야(Unambiguous) 합니다."
+* **Methodology:**
+    * **Legal Benign Interpretation:** 불완전한 사용자 입력을 표준적인 의도로 선해하여 실행.
+    * **Due Process of Reasoning:** 결론 도출 전 반드시 거쳐야 할 '사고의 절차'를 강제.
 
 ---
 
 ## 📜 License
 
-**MIT License** - Feel free to use, but please credit this philosophical endeavor.
+**MIT License**
+
+* 이 논리 아키텍처는 자유롭게 사용하시되, **'논리(Logic)'**의 가치를 존중해주시기 바랍니다.
