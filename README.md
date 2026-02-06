@@ -1,21 +1,6 @@
-# 🌪️ Prompt-Chain-Architect: Logic over Code
-> **"Transform a 'dumb' one-liner into a production-ready XML system prompt through a 5-step adversarial chain."**
-> **"단 한 줄의 멍청한 아이디어를 5단계 에이전트 체인을 통해 프로덕션급 XML 프롬프트로 변환합니다."**
-
----
-
-## 🧠 Philosophy / 설계 철학
-
-**"Don't ask AI for the answer; make AI fight for it."**
-This framework was built by a **Philosophy major and current Law School student** with zero coding background. By applying philosophical reasoning and legal scrutiny to XML schemas, this system achieves high-level prompt engineering through "Adversarial Discussion" between agents.
-
-**"AI에게 정답을 묻지 말고, AI끼리 싸우게 하십시오."**
-본 프레임워크는 코딩 경험이 전혀 없는 **철학 전공 로스쿨생**이 구축했습니다. 철학적 추론과 법학적 검증 로직을 XML 스키마에 이식하여, 에이전트 간의 '적대적 토론'을 통해 고도화된 프롬프트를 생성합니다.
-
----
-
-## 📊 Workflow / 워크플로우
-![Prompt Chain Flowchart](arrow_image.jpg)
+# 🏭 Prompt-Chain-Architect: The No-Code Logic Factory
+> **"Build Production-Ready System Prompts with Zero Coding."**
+> **"코딩 없이, 단 한 줄의 아이디어를 프로덕션급 시스템 프롬프트로 찍어내는 논리 공장입니다."**
 
 ---
 
@@ -25,27 +10,6 @@ This framework was built by a **Philosophy major and current Law School student*
 
 > **이미지를 클릭하면 유튜브에서 전체 데모 영상을 시청할 수 있습니다.**
 > **Click the image above to watch the full demo on YouTube.**
-
----
-
-## 🚀 5-Step Workflow / 5단계 워크플로우
-
-Copy the contents of each `.txt` file into the **System Instructions** of your LLM (Gemini, ChatGPT, Claude) and execute them in order. 
-*Optimal `Temperature` and `Top P` values are specified inside each file.*
-
-각 `.txt` 파일의 내용을 LLM의 **System Instructions**에 넣고 순차적으로 실행하십시오. 
-*각 파일 내부에 최적의 `Temperature`와 `Top P` 값이 명시되어 있습니다.*
-
-1.  **[01_XML_Draft_Generator.txt](./01_XML_Draft_Generator.txt)**
-    *   **Tip:** Give the "dumbest" and simplest instruction possible. (e.g., "Help me with stocks")
-    *   **팁:** 최대한 '멍청하고 단순하게' 지시하십시오. (예: "주식 초보 도와줘")
-2.  **[02_XML_Draft_1st_Revision.txt](./02_XML_Draft_1st_Revision.txt)**
-3.  **[03_Idea_Bank.txt](./03_Idea_Bank.txt)**
-4.  **[04_user_representative.txt](./04_user_representative.txt)**
-5.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
-
-> **Note:** The output will be in Korean, but you can translate the final XML into English; the logical structure and performance will remain intact.
-> **참고:** 결과물은 한국어로 출력되나, 최종 XML을 영어로 번역하여 사용해도 논리적 구조와 성능은 완벽하게 유지됩니다.
 
 ---
 
@@ -115,16 +79,74 @@ Copy the contents of each `.txt` file into the **System Instructions** of your L
 </system_instructions>
 ```
 
+---
+
+## 📊 Workflow / 워크플로우
+![Prompt Chain Flowchart](arrow_image.jpg)
+
+---
+
+## 🚀 How to Use / 사용 가이드 (Step-by-Step)
+
+**Ready to build? Follow these simple steps. (준비되셨나요? 아주 간단합니다.)**
+
+### 1. **Open the File (파일 열기)**
+* Open the `.txt` file for the current step (e.g., `01_XML_Draft_Generator.txt`).
+* 각 단계에 해당하는 `.txt` 파일을 엽니다. (예: `01_XML_Draft_Generator.txt`)
+
+### 2. **Copy & Paste (복사 및 붙여넣기)**
+* Copy **ALL** the text inside the file.
+* Paste it into the **"System Instructions"** field of your AI tool.
+* 파일 안의 **모든** 텍스트를 복사하여, 사용 중인 AI 도구의 **"System Instructions(시스템 지시)"** 란에 붙여넣으세요.
+
+> **💡 Where is "System Instructions"? (시스템 지시란은 어디에 있나요?)**
+> * **Google AI Studio:** 화면 왼쪽 상단에 있는 `System Instructions` 입력창.
+> * **ChatGPT (Custom Instructions):** 설정(Settings) -> 개인화(Personalization) -> `Custom Instructions`.
+> * **Claude (Workbench):** 화면의 `System` 입력창.
+> * *(If you use standard web chat, just paste it as the very first message.)*
+> * *(만약 복잡한 툴 없이 일반 웹 채팅창을 쓰신다면, 대화를 시작할 때 맨 처음에 붙여넣으시면 됩니다.)*
+
+### 3. **Execute & Iterate (실행 및 반복)**
+* **Step 1:** Start the chat with your raw idea (e.g., "Help me invest").
+* **Step 2:** Take the result from Step 1, and use it as the input for Step 2 agent.
+* **Step 3:** Repeat until the final step.
+* **1단계:** 사용자의 거친 아이디어(예: "주식 투자 도와줘")를 입력하고 대화를 시작하세요.
+* **2단계:** 1단계에서 AI가 만들어준 결과물을 복사해서, 2단계 파일이 적용된 AI에게 입력하세요.
+* **반복:** 이 과정을 마지막 단계까지 반복하면, 완벽한 프롬프트가 탄생합니다.
+
+---
+
+## 🚀 5-Step Workflow / 5단계 워크플로우
+
+Copy the contents of each `.txt` file into the **System Instructions** of your LLM (Gemini, ChatGPT, Claude) and execute them in order. 
+*Optimal `Temperature` and `Top P` values are specified inside each file.*
+
+각 `.txt` 파일의 내용을 LLM의 **System Instructions**에 넣고 순차적으로 실행하십시오. 
+*각 파일 내부에 최적의 `Temperature`와 `Top P` 값이 명시되어 있습니다.*
+
+1.  **[01_XML_Draft_Generator.txt](./01_XML_Draft_Generator.txt)**
+    *   **Tip:** Give the "dumbest" and simplest instruction possible. (e.g., "Help me with stocks")
+    *   **팁:** 최대한 '멍청하고 단순하게' 지시하십시오. (예: "주식 초보 도와줘")
+2.  **[02_XML_Draft_1st_Revision.txt](./02_XML_Draft_1st_Revision.txt)**
+3.  **[03_Idea_Bank.txt](./03_Idea_Bank.txt)**
+4.  **[04_user_representative.txt](./04_user_representative.txt)**
+5.  **[05_prompt_final_auditor.txt](./05_prompt_final_auditor.txt)**
+
+> **Note:** The output will be in Korean, but you can translate the final XML into English; the logical structure and performance will remain intact.
+> **참고:** 결과물은 한국어로 출력되나, 최종 XML을 영어로 번역하여 사용해도 논리적 구조와 성능은 완벽하게 유지됩니다.
+
+---
+
 ## 👤 About the Author / 저자 소개
 
-* **Major:** Philosophy / Current Law School Student
-* **Background:** Zero experience in coding or prompt engineering.
-* **Discovery:** Discovered AI Studio a week ago; built this system by making Gemini agents debate each other.
-* **Message:** "The core of prompt engineering is **Logic**, not technology."
-* **전공:** 철학 / 현직 로스쿨생
-* **배경:** 코딩 및 프롬프트 엔지니어링 경험 전무.
-* **계기:** 일주일 전 AI Studio를 접한 뒤, 에이전트 간의 적대적 토론을 통해 본 시스템을 고안함.
-* **메시지:** "프롬프트 엔지니어링의 핵심은 기술이 아니라 **논리(Logic)**에 있습니다."
+* **Role:** **Logic Architect** (Non-coder)
+* **Background:** Philosophy Major & Current Law School Student.
+* **Core Competency:** Constructed a high-level recursive reasoning system using only natural language, applying **Legal Benign Interpretation (법학적 선해)** to AI logic.
+* **Message:** "Code is just a tool; **Logic** is the architecture."
+* **역할:** **로직 아키텍트** (Non-coder)
+* **배경:** 철학 전공 / 현직 로스쿨생
+* **핵심 역량:** 코딩 없이 자연어만으로 회귀적 추론 시스템을 구축. **'법학적 선해'** 방법론을 AI 논리 설계에 최초로 적용.
+* **메시지:** "코드는 도구일 뿐입니다. **논리(Logic)**가 진짜 아키텍처입니다."
 
 ---
 
