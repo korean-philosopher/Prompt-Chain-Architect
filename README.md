@@ -192,7 +192,7 @@
 ---
 
 ## 📊 Workflow / 워크플로우
-![Logic Flow Diagram](...)
+![Logic Flow Diagram](Logic_arrow_file.png)
 *(Note: MPA는 단순한 텍스트 생성기가 아닙니다. 입력값을 `Routing` -> `Architecting` -> `Reasoning` -> `Auditing` 하는 **논리적 파이프라인**입니다.)*
 
 ---
