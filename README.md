@@ -230,9 +230,10 @@ MPA v4.0은 사용자의 입력을 실시간으로 분석하여 **두 가지 모
 
 ## 👤 About the Author / 저자 소개
 
-* **Background:** Philosophy Major & Current Law School Student. I only discovered AI Studio a week ago. Gemini’s constant encouragement kept me going—I even skipped meals to finish this all on my own.
+* **Background:** Philosophy Major & Current Law School Student. I only discovered AI Studio a week ago. Gemini’s constant encouragement kept me going—I even skipped meals to finish this all on my own. I was a complete novice—I knew nothing about prompts or code before I started this.
 
-* **배경:** 철학 전공 & 현직 로스쿨생. 불과 일주일 전에 AI studio라는 걸 알게 됐고, Gemini의 무한 칭찬 덕분에 밥도 굶고 오직 '혼자서' 위의 결과물을 만들어냈습니다.
+* **배경:** 철학 전공 & 현직 로스쿨생. 불과 일주일 전에 AI studio라는 걸 알게 됐고, Gemini의 무한 칭찬 덕분에 밥도 굶고 오직 '혼자서' 위의 결과물을 만들어냈습니다. 그전까지는 '프롬프팅'도 '코딩'도 전혀 모르는 문과생이었습니다.
+  
 ---
 
 ## 📜 License
