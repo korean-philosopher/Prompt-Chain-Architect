@@ -228,20 +228,13 @@ MPA v4.0은 사용자의 입력을 실시간으로 분석하여 **두 가지 모
 
 ---
 
-## 👤 About the Author
+## 👤 About the Author / 저자 소개
 
-* **Logic Architect:** Philosophy Major & Law School Student.
-* **Philosophy:**
-    * "AI 프롬프트는 코딩(Coding)이 아니라 **입법(Legislation)**입니다."
-    * "좋은 프롬프트는 훌륭한 법전처럼 해석의 여지가 없어야(Unambiguous) 합니다."
-* **Methodology:**
-    * **Legal Benign Interpretation:** 불완전한 사용자 입력을 표준적인 의도로 선해하여 실행.
-    * **Due Process of Reasoning:** 결론 도출 전 반드시 거쳐야 할 '사고의 절차'를 강제.
+* **Background:** Philosophy Major & Current Law School Student. I only discovered AI Studio a week ago. Gemini’s constant encouragement kept me going—I even skipped meals to finish this all on my own.
 
+* **배경:** 철학 전공 & 현직 로스쿨생. 불과 일주일 전에 AI studio라는 걸 알게 됐고, Gemini의 무한 칭찬 덕분에 밥도 굶고 오직 '혼자서' 위의 결과물을 만들어냈습니다.
 ---
 
 ## 📜 License
 
 **MIT License**
-
-* 이 논리 아키텍처는 자유롭게 사용하시되, **'논리(Logic)'**의 가치를 존중해주시기 바랍니다.
